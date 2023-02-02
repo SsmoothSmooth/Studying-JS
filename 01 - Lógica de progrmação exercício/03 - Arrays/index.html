@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <script>
+          /* 
+              - Arrays: é um objeto global usado na construção de matriz.
+                     
+              - Arrays são objetos semelhantes a listas que vêm com uma série 
+                de métodos embutidos para realizar operações de travessia e mutação.
+          */
+
+          // Arrays
+          var names = ['Smooth', 'SmoothSmooth', 'SsmoothSmoother'];
+
+          console.log(names[2]);
+
+          /* --------------------- Outra forma de declarar arrays --------------------- */
+          var name_2 = new Array('Smooth', 'SmoothSmooth', 'SsmoothSmoother');
+
+          console.log(name_2[1]);
+          /* ------------------------------------------------------------------------- */
+
+        /* Algumas métodos do arrays */
+
+          // Substituir um item do Array
+            names[0] = 'Caixa';
+            console.log(names[0]);
+
+          // Adicionar item no início do Array
+            names.unshift('dragrão')
+            console.log(names[0]);
+
+          // Adicionar item no final do Array
+            names.push('Lanche');
+            console.log(names[4]);
+
+          // Remover item no final do Array
+            console.log(names);
+            
+            names.pop();
+            console.log(names);
+
+            console.log('-----------------------------------------');
+          // Remover item no inicio do Array
+            console.log(names);
+            
+            names.shift();
+            console.log(names);
+
+            console.log('-----------------------------------------');
+          // Procurar o indice de um item no Array
+            console.log(names);
+            
+            console.log(names.indexOf('SmoothSmooth'));
+
+            console.log('-----------------------------------------');
+          // Copiar um Array
+            var copiar = names.slice()
+            console.log(copiar)
+        </script> 
+    </body>
+</html>
