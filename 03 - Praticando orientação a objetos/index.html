@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Praticando orientação a objetos</title>
+    </head>
+    <body>
+        <script>
+
+            function Pessoa(){
+                this.nome = "Smoother";
+                this.idade = 25;
+                
+                // Funcação
+                this.printNome = function(numero){
+                    alert(numero);
+                }
+            }
+
+            function Animal(nome, peso){
+                if(nome == undefined){
+                    nome = "Dog"
+                }
+
+                if(peso == undefined){
+                    peso = "5kg"
+                }
+
+                this.nome = nome;
+                this.peso = peso;
+            }
+
+            animal = new Animal("Cachorro");
+
+            alert(animal.nome);
+            alert(animal.peso);
+
+
+           
+
+        </script>
+    </body>
+</html>
