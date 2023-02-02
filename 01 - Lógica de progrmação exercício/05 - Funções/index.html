@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <script>
+            /*
+            Funções = São blocos de construção de codigo, um conjunto 
+                de instruções que executa uma tarefa ou calcula um valor. 
+            */ 
+
+            // Void
+            function teste(){
+                console.log('chamando a função teste');
+            }
+
+            teste();
+
+            // Com parametro
+            function teste2(nome, idade) {
+                console.log('O nome é ' + nome)
+                console.log('Idade é ' + idade)
+                console.log('----------------- ')
+            }
+
+            teste2('Smooth', 10);
+            teste2('SmoothSmooth', 30);
+
+            // Return um resultado
+            function pegarNome(parametro) {
+                if(parametro == 1){
+                    return "SmoothSmoother";
+                }
+                else {
+                    return "Name dois"
+                }
+            }
+
+            var nome2 = pegarNome(1);
+
+            console.log(nome2)
+
+        </script>
+    </body>
+</html>
