@@ -15,26 +15,23 @@
                 // Funcação
                 this.printNome = function(numero){
                     alert(numero);
+                };
+
+                this.returnAnimal = function(animal){
+                    return animal;
                 }
             }
 
-            function Animal(nome, peso){
-                if(nome == undefined){
-                    nome = "Dog"
-                }
-
-                if(peso == undefined){
-                    peso = "5kg"
-                }
-
-                this.nome = nome;
-                this.peso = peso;
+            function Animal(){
+                this.nome = "Dog";
+                this.raca = "Bulldog";
             }
 
-            animal = new Animal("Cachorro");
+            var pessoa = new Pessoa();
+            var animal = new Animal();
 
-            alert(animal.nome);
-            alert(animal.peso);
+            alert(pessoa.returnAnimal(animal).raca);
+
 
 
            
