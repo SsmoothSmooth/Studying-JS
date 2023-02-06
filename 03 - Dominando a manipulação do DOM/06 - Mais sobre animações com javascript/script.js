@@ -1,5 +1,12 @@
 document.querySelector('.conteudo span')
 .addEventListener('click', function(){
-    document.querySelector('.conteudo p')
-    .classList.add('mostrar');
+    var conteudo = document.querySelector('.conteudo p');
+    
+    if(conteudo.classList.contains('mostrar')){
+        conteudo.classList.remove('mostrar');
+
+    }else{
+        conteudo.classList.add('mostrar');
+    }
+    
 });
