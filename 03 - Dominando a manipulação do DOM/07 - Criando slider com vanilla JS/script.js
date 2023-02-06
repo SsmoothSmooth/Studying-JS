@@ -7,9 +7,18 @@ images.forEach((item,index)=>{
     .addEventListener('click',()=>{
         let lastImage = document.querySelectorAll('.container img')[lastIndex];
         let actualImage = document.querySelectorAll('.container img')[index];
-        lastIndex = index;
+        
+        // Resetar as bullet e setar a nova com base na imagem
+
+        document.querySelectorAll('.bullet-single')[lastIndex]
+        .classList.remove('active-bullet');
+
+        document.querySelectorAll('.bullet-single')[index]
+        .classList.add('active-bullet');
 
         lastImage.style.opacity = 0;
         actualImage.style.opacity = 1;
+
+        lastIndex = index;
     })
 })
