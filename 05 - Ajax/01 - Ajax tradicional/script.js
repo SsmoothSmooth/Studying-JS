@@ -1,21 +1,26 @@
-var request = new XMLHttpRequest();
 
-request.open('GET','https://jsonplaceholder.typicode.com/todos/1', true);
+setTimeout(function(){
+    var request = new XMLHttpRequest();
 
-request.onload = function(){
-    if(this.status >= 200 && this.status < 400){
-        // request foi feito com sucesso!
-        var data = JSON.parse(this.response);
-        console.log(data);
+    request.open('GET','https://jsonplaceholder.typicode.com/todos/1', true);
 
-    }else{
-        // erro
+    request.onload = function(){
+        if(this.status >= 200 && this.status < 400){
+            // request foi feito com sucesso!
+            var data = JSON.parse(this.response);
+            console.log(data);
+
+        }else{
+            // erro
+
+        }
+    }
+
+    request.onerror = function(){
 
     }
-}
 
-request.onerror = function(){
+    request.send();
+}, 2000)
 
-}
 
-request.send();
