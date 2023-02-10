@@ -8,11 +8,25 @@ fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05
         json.results.map(function(val){
             container.innerHTML += 
             `
-            <p>`+ val.title +`
-                <div>`+ val.overview +`</div>
+            <div style="cursor: pointer" class="tituloFilme">`+ val.title +`
+                <div style="display: none;" class="description">`+ val.overview +`</div>
                 <hr>
-            </p>
-            
+            </div>
+
             `;
         })
+
+        var titulos = document.querySelectorAll('.tituloFilme')
+        for(var i =0; i < titulos.length; i++){
+            titulos[i].addEventListener('click', function (t){
+
+                if(t.target.querySelector('.description').style.display == "none"){
+                    t.target.querySelector('.description').style.display = "block";
+                }else {
+                    t.target.querySelector('.description').style.display = "none";
+
+                }
+            })
+        }
+
 })
