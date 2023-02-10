@@ -3,6 +3,16 @@ fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05
 })
 .then(response => response.json())
 .then(function(json){
+        var container = document.querySelector('.container');
 
-    console.log(json);
+        json.results.map(function(val){
+            container.innerHTML += 
+            `
+            <p>`+ val.title +`
+                <div>`+ val.overview +`</div>
+                <hr>
+            </p>
+            
+            `;
+        })
 })
